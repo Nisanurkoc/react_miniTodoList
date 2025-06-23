@@ -1,0 +1,143 @@
+.container {
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+}
+
+.light {
+  background-color: #f9f9f9;
+  color: #333;
+}
+.dark {
+  background-color: #222;
+  color: #eee;
+}
+
+.input-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #079119;
+  color: white;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #067115;
+}
+
+.theme-btn {
+  margin-bottom: 15px;
+  background-color: #fdfeff;
+  font-size: 24px;
+  color: #222;
+}
+
+.theme-btn:hover {
+  background-color: #5a6268;
+  color: white;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background-color: rgba(0,0,0,0.05);
+  margin-bottom: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  flex-wrap: wrap;
+}
+
+.dark .todo-list li {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.delete-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+/* ✅ Responsive Tasarım: */
+@media (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button,
+  .theme-btn {
+    width: 100%;
+    font-size: 22px;
+  }
+
+  input[type="text"] {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .todo-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    margin-top: 8px;
+    align-self: flex-end;
+  }
+}
